@@ -1,1 +1,53 @@
-/** Write your CSS in here **/
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-self: cover;
+    background-color: goldenrod;
+    font-family: "Georgia", serif;
+}
+
+.container {
+    background-color: white;
+    padding: 40px 60px;
+    width: 70%;
+    max-width: 600px;
+    text-align: right;
+    margin-top: 150px;
+}
+
+#quote {
+    color: goldenrod;
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+    display: block;
+}
+
+#author {
+    color: goldenrod;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#new-quote {
+    background-color: goldenrod;
+    color: white;
+    border:none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+#new-quote:hover {
+  opacity: 0.8;
+}
+
+#quote::before {
+  content: '“';
+  font-size: 100px;
+  line-height: 0;
+  margin-right: 5px;
+  vertical-align: sub;
+}
