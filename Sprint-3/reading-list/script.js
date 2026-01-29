@@ -1,21 +1,4 @@
 // for the tests, do not modify this array of books
-const readingList = document.getElementById('reading-list');
-books.forEach(function(book) {
-  const listItem = document.createElement('li');
-  const bookImage = document.createElement('img');
-  bookImage.src = book.bookCoverImage;
-  const bookInfo = document.createElement('p');
-  bookInfo.textContent = `${book.title} by ${book.author}`;
-  if (book.alreadyRead) {
-    listItem.classList.add('read');
-  } else {
-    listItem.classList.add('unread');
-  }
-  listItem.appendChild(bookImage);
-  listItem.appendChild(bookInfo);
-  readingList.appendChild(listItem);
-});
-
 const books = [
   {
     title: "The Design of Everyday Things",
@@ -37,4 +20,21 @@ const books = [
     bookCoverImage: "https://blackwells.co.uk/jacket/l/9780135957059.jpg",
   },
 ];
+
+const readingList = document.getElementById('reading-list');
+books.forEach(function(book) {
+  const listItem = document.createElement('li');
+  const bookImage = document.createElement('img');
+  bookImage.src = book.bookCoverImage;
+  const bookInfo = document.createElement('p');
+  bookInfo.textContent = `${book.title} by ${book.author}`;
+  if (book.alreadyRead) {
+    listItem.classList.add('read');
+  } else {
+    listItem.classList.add('unread');
+  }
+  listItem.appendChild(bookImage);
+  listItem.appendChild(bookInfo);
+  readingList.appendChild(listItem);
+});
 
