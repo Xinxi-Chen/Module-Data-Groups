@@ -10,6 +10,9 @@ html,
 body {
   font-family: "Source Sans Pro", -apple-system, system-ui, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center; 
 }
 
 .site-footer {
@@ -156,4 +159,43 @@ body {
   .navbar-brand > img {
     max-height: 80px;
   }
+}
+
+#reading-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  width: auto;
+  height: auto;
+}
+
+#reading-list li {
+  text-align: center;
+  margin-bottom: 25px;
+  width: 600px;
+  height: 300px;
+  display: flex;  
+  flex-direction: column;     
+}
+
+#reading-list img {
+  width: auto;
+  height: 200px;
+  display: block;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+#reading-list p {
+  margin: 0;
+  font-size: 1.1em;
+  text-align: left;
+}
+.read {
+  background-color: green;
+}
+
+.unread {
+  background-color: red;
 }
