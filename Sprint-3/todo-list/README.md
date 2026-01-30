@@ -7,6 +7,11 @@ This is a super handy, super simple to do list.
 You will be given a list of tasks which are "To Do". We call these tasks "ToDos"
 
 Each item in the list should have 2 buttons:
+```html
+<span class="badge bg-primary rounded-pill">
+  <i class="fa fa-check" aria-hidden="true"></i>
+  <i class="fa fa-trash" aria-hidden="true"></i>
+</span>
 
 - One to click when the ToDo has been completed - it will apply a line-through style to the text of the ToDo.
 - A second to delete the ToDo. This could be used to delete completed ToDos from the list, or remove ToDos that we are no longer interested in doing.
