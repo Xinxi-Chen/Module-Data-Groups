@@ -1,3 +1,32 @@
+function countWordsAdvanced(string) {
+  if (!string) return{};
+  
+  const cleanWords = string
+    .toLowerCase()
+    .replace(/[.,!?]/g, "")
+    .split(" ");
+  
+    const counts = {};
+
+  for (const word of cleanWords) {
+    if (word === "") {
+      continue;
+    }
+    counts[word] = (counts[word] || 0) + 1;
+   }
+  return counts;
+}
+
+function getMostCommon(counts) {
+  const entries = Object.entries(counts);
+  entries.sort((a, b) => b[1] - a[1]);
+  return entries;
+}
+
+const text = "You! and me, and you. and you you!"
+const myCounts = countWordsAdvanced(text);
+const sorted = getMostCommon(myCounts);
+console.log(sorted[0]);
 /*
   Count the number of times a word appears in a given string.
 
